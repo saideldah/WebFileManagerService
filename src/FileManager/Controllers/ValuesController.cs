@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FileManager.Controllers
 {
+
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "saeed", "aaa" };
         }
 
         // GET api/values/5
@@ -25,8 +24,9 @@ namespace FileManager.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public object Post([FromBody]string value)
         {
+            return new { Name = "saeed" };
         }
 
         // PUT api/values/5
